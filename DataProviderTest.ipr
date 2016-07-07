@@ -266,6 +266,9 @@
       <method />
     </configuration>
   </component>
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+  </component>
   <component name="libraryTable">
     <library name="Gradle: com.beust:jcommander:1.48">
       <CLASSES>
