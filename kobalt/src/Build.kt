@@ -1,10 +1,6 @@
-import com.beust.kobalt.*
-import com.beust.kobalt.plugin.packaging.*
-import com.beust.kobalt.plugin.application.*
-import com.beust.kobalt.plugin.java.*
-
-val repos = repos()
-
+import com.beust.kobalt.plugin.application.application
+import com.beust.kobalt.plugin.packaging.assemble
+import com.beust.kobalt.project
 
 val p = project {
 
@@ -22,22 +18,21 @@ val p = project {
     }
 
     dependencies {
-//        compile("com.beust:jcommander:1.48")
+
     }
 
     dependenciesTest {
         compile("org.testng:testng:6.9.9")
-
+        // WORKAROUND
+        compile("com.google.guava:guava:19.0")
     }
 
     assemble {
-        jar {
-        }
+        jar {}
     }
 
     application {
         mainClass = "com.example.Main"
     }
-
 
 }
